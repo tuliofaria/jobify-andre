@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 25px;
+}
+
+li{
+    margin: 0px;
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    height: 68px;
+    top: 298px;
+    background: #C4C4C4;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    padding: 18 0 10 10;
+    line-height: normal;
+}
+
+h2, h3, li {
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin: 20px 0 4px 0;
+}
+
+input, select {
+    display: block;
+    padding: 8px;
+    width: 540px;
+}
+
+textarea {
+    padding: 8px;
+    width: 540px;
+    height: 320px;
+}
+
+button {
+    display: block;
+    padding: 8px;
+    width: 120px;
+}
