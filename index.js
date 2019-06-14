@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 //Determina que a dependencia "EJS" será o template fron-end
 app.set('view engine', 'ejs');
 //Determina que a dependencia "Express" procure arquivos na pasta "public", caso não ache na pasta principal da aplicação
-app.use(express.static('public'));
+app.use(express.static(path.resolve(__dirname, 'public')));
 //Determina que toda requisição que passar pelo "Express" deve passar pelo "Body Parser"
 app.use(bodyParser.urlencoded({extended: true}));
 //Determinando uma mensagem de resposta quando a aplicação for acessada (requisição)
