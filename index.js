@@ -14,6 +14,9 @@ const dbConnection = sqlite.open(path.resolve(__dirname, 'bd.sqlite', { Promise 
 //Cria uma varíavel de ambiente para receber uma porta de entrada do servidor, caso contrario, a conexão será feita na porta 3000
 const port = process.env.PORT || 3000
 
+//
+app.set('views', path.join(__dirname, 'views'));
+
 //Determina que a dependencia "EJS" será o template fron-end
 app.set('view engine', 'ejs');
 //Determina que a dependencia "Express" procure arquivos na pasta "public", caso não ache na pasta principal da aplicação
