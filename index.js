@@ -4,10 +4,12 @@ const express = require ('express');
 const app = express();
 //Importando a dependencia "Body parser"
 const bodyParser = require ('body-parser');
+//Corrige caminho das rotas para o www.zeit.co
+const path = require ("path");
 //Importando a dependencia "SQLite"
 const sqlite = require ('sqlite');
 //Criando a conexão e o banco de dados
-const dbConnection = sqlite.open('bd.sqlite', { Promise });
+const dbConnection = sqlite.open(path.resolve(__dirname, 'bd.sqlite', { Promise });
 
 //Cria uma varíavel de ambiente para receber uma porta de entrada do servidor, caso contrario, a conexão será feita na porta 3000
 const port = process.env.PORT || 3000
