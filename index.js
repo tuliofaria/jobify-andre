@@ -9,12 +9,12 @@ const path = require ("path");
 //Importando a dependencia "SQLite"
 const sqlite = require ('sqlite');
 //Criando a conexão e o banco de dados
-const dbConnection = sqlite.open(path.resolve(__dirname, 'bd.sqlite', { Promise });
+const dbConnection = sqlite.open(path.resolve(__dirname, 'bd.sqlite', { Promise }));
 
 //Cria uma varíavel de ambiente para receber uma porta de entrada do servidor, caso contrario, a conexão será feita na porta 3000
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
-//
+//Fixando a rota do view
 app.set('views', path.join(__dirname, 'views'));
 
 //Determina que a dependencia "EJS" será o template fron-end
