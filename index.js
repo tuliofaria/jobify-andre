@@ -8,6 +8,10 @@ const bodyParser = require ('body-parser');
 const sqlite = require ('sqlite');
 //Criando a conexão e o banco de dados
 const dbConnection = sqlite.open('bd.sqlite', { Promise });
+
+//Cria uma varíavel de ambiente para receber uma porta de entrada do servidor, caso contrario, a conexão será feita na porta 3000
+const port = process.env.PORT || 3000
+
 //Determina que a dependencia "EJS" será o template fron-end
 app.set('view engine', 'ejs');
 //Determina que a dependencia "Express" procure arquivos na pasta "public", caso não ache na pasta principal da aplicação
@@ -121,7 +125,7 @@ init();
 //Determinando a porta de entrada apara a aplicação, uma mensagem de erro e uma mensagem de acesso ok
 //Quando a aplicação estiver rodando na web temos que usar a posta 80 (http) ou 443 (https)
 //Em ambiente de desenvolvimento usamos uma porta alta Ex.: 3000 para evitar conflitos com outras aplicações (Ex.: antiviros)
-app.listen (4000, (err) => {
+app.listen (port, (err) => {
     if(err) {
         console.log ('Não foi possível iniciar o servidor do Jobify.');
     }
